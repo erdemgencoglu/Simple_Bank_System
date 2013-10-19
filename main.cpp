@@ -9,12 +9,12 @@
 	#include <conio.h>	/*getch(); komutunu içeren kütüphane.*/
 	void main()
 	{
-	char KulAdi='a';		/*Burada sadece 1 karekter sorguladık birden fazla sorgulanmak istenirse dizi tanımlanarak yapılabilir.*/
+	char KulAdi='a';	   /*Burada sadece 1 karekter sorguladık birden fazla sorgulanmak istenirse dizi tanımlanarak yapılabilir.*/
 	int	 Parola,secim;	   /*int tipindeki değişkenlerimiz.*/
 	int DgrHesap,Yatrlan,Cekilen,Gondrln,HespDgri=2500; /*Tanımladığımız diğer değişkenler.*/
 	char tercih;
-	printf("\t\t --------------------------------------- \n");		//
-	printf("\t\t *                Eg Bank               *\n");		// Karşılama ekranımız.
+	printf("\t\t --------------------------------------- \n");	//
+	printf("\t\t *                Eg Bank               *\n");	// Karşılama ekranımız.
 	printf("\t\t --------------------------------------- \n\n");	//
 	printf("Lutfen kullanici adinizi ve parolanizi giriniz\n\n");	
 	printf("Kullanici Adi : ");		/*Kullanıcı Sorgulama Ekranımız*/
@@ -26,7 +26,7 @@
 		{
 		do{				//do-while döngü başlangıcı.
 		system("cls");	//Ekranı temizleyen kodumuz.
-		printf("\t\tHosgeldiniz\n");							//
+		printf("\t\tHosgeldiniz\n");						
 		printf(" ------------------------------------- \n");	//
 		printf("| [1] Bakiye Sorgulama                |\n");	//
 		printf("| [2] Para Yatirma                    |\n");	//	Menümüzün arayüzü
@@ -39,41 +39,41 @@
 		printf("\n");
 		switch(secim)/*secim değiskenini sorgulayarak istenilen menüye girmeyi sağlar.*/
 		{
-				case 1:														// case 1: de bakiye gösterimi yapılmıştır.
+				case 1:								// case 1: de bakiye gösterimi yapılmıştır.
 				printf("Hesabinizda = %d TL Bulunmaktadir.\n", HespDgri);	//
-				break;														//
+				break;								//
 
 				case 2:  
-				printf("\t\t\t--PARA YATIRMA--\n\n");						//
+				printf("\t\t\t--PARA YATIRMA--\n\n");				//
 				printf("Lutfen yatiracaginiz para miktarini giriniz: ");	//
-				scanf("%d",&Yatrlan);										// case 2: de para yatırma menüsü ve işlemleri yapılmıştır.
-				HespDgri=HespDgri+Yatrlan;									//
-				printf("Hesabiniza %d TL yatirildi.\n",Yatrlan);			//
+				scanf("%d",&Yatrlan);						// case 2: de para yatırma menüsü ve işlemleri yapılmıştır.
+				HespDgri=HespDgri+Yatrlan;					//
+				printf("Hesabiniza %d TL yatirildi.\n",Yatrlan);		//
 				printf("Toplam kullanilabilir bakiyeniz=%d Tl dir.\n",HespDgri);//					
 				break;
 			
-				case 3:														//
-				printf("\t\t\t--PARA CEKME--\n\n");							// case 3: de para çekme menüsü ve işlemleri vardır ve case yapsının içinde  
+				case 3:								//
+				printf("\t\t\t--PARA CEKME--\n\n");				// case 3: de para çekme menüsü ve işlemleri vardır ve case yapsının içinde  
 				printf("Lutfen Cekeceginiz Para Miktarini Giriniz: ");		// if le kontrol yapılmıştır
-				scanf("%d",&Cekilen);										//
+				scanf("%d",&Cekilen);						//
 					if(Cekilen>HespDgri)/*if yapsında çekilen paranın büyüklüğü kontrol edilmiştir.*/
 					{
 					printf("Hesabinizda Yeteri Kadar Para Bulunmamaktadir.\n");	/*Kullanıcı uyarılmıştır.*/		
 					}
 					else //else ye kullanıcının bakiyesi yeterli ise girer ve işlemler gerçekleşir. 
 					{
-					HespDgri=HespDgri-Cekilen;									// işlemler
+					HespDgri=HespDgri-Cekilen;					// işlemler
 					printf("Hesabinizdan %d Tl cekilmistir.\n",Cekilen);		//
 					printf("Hesabinizda toplam kullanilabilir bakiye %d TL dir.\n",HespDgri);
 					}
 				break;
 				case 4:  
-					printf("\t\t\t--PARA GONDERME--\n");					// case 4: de ise para gönderme ve işlemleri yapılmıştır.
+					printf("\t\t\t--PARA GONDERME--\n");			// case 4: de ise para gönderme ve işlemleri yapılmıştır.
 					printf("Para gondereceginiz hesab numarasini giriniz:");//
-					scanf("%d",&DgrHesap);									//	para gönderme işlemleri 
-					printf("Gondericeginiz para miktarini giriniz:");		//
-					scanf("%d",&Gondrln);									//
-						if(Gondrln>HespDgri)						/*Gönderilen paranın hesabımızdaki para ile karşılaştırılması yapılmıştır. */
+					scanf("%d",&DgrHesap);					//	para gönderme işlemleri 
+					printf("Gondericeginiz para miktarini giriniz:");	//
+					scanf("%d",&Gondrln);					//
+						if(Gondrln>HespDgri)	/*Gönderilen paranın hesabımızdaki para ile karşılaştırılması yapılmıştır. */
 						{
 						printf("Hesabinizda Yeteri Kadar Para Bulunmamaktadir.\n");//Eğer bakiyemiz yeterli değilse bu kullanıcıya belirtilmiştir.					
 						}
@@ -93,20 +93,20 @@
 			default: /*Case yapısı sonlandırıldı.*/
 				printf("Seciminizi yanlis yaptiniz lutfen sonra tekrar deneyiniz:\n");//Girilen secim yanlış ise bu printf ile kullanıcıya bildirilmiştir.
 			}//switchin kapama parantezi.			
-		printf("\n");												//
+		printf("\n");							//
 		printf("Yeni bir isleme devam etmek istiyormusunuz?\n");	//
-		printf("(e) veya (h) ");									// Yeni işlem yapılma sorgusu
-		printf("\n");												//
-		tercih=getch();												//
-			}// do döngüsünün bitiş parantezi.
+		printf("(e) veya (h) ");					// Yeni işlem yapılma sorgusu
+		printf("\n");							//
+		tercih=getch();							//
+			}
 	while(tercih =='e');// while döngüsü tercih e olduğu sürece islemlerin sürekli tekrarlanmasını sağlar.
-		}//if in kapama parantezi.
+		}
 	else/*Bu else kısımına kullanıcı adı ve parolanın yanlış girilmesi sonucu girer.*/
 		{
-			printf("\n");
-			printf("Kullanici Adi veya Parolanizi Yanlis Girdiniz.!!!\n\nLutfen Tekrar Kontrol Ediniz!\n\n");//Sorgu kısmında yanlış parola veya kullanıcı						
+		printf("\n");
+		printf("Kullanici Adi veya Parolanizi Yanlis Girdiniz.!!!\n\nLutfen Tekrar Kontrol Ediniz!\n\n");//Sorgu kısmında yanlış parola veya kullanıcıadi girilmisse işleme devam etmez.						
 		}	
 	printf("\n");
-	system("pause");/*Programın kapanması için bir tuşa basılması beklenir.*/																			  //adi girilmisse işleme devam etmez.
+	system("pause");/*Programın kapanması için bir tuşa basılması beklenir.*/																			  
 	
 	}
