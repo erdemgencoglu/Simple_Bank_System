@@ -22,7 +22,7 @@
 	printf("Parola : ");			/*Parola Sorgulama Ekranımız*/
 	scanf("%d",&Parola);			/*Parola 'Parola' değişkeninin adresine yazılmıştır.*/		
 	
-	if(KulAdi=='a' && Parola==81334)/*if yapısı ile kullanıcı adı ve parola sorgulaması yapılmıştır.*/
+	if(KulAdi='a' && Parola==81334)/*if yapısı ile kullanıcı adı ve parola sorgulaması yapılmıştır.*/
 		{
 		do{             //do-while döngü başlangıcı.
 		system("cls");  //Ekranı temizleyen kodumuz.
