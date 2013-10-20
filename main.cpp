@@ -10,7 +10,7 @@
 	void main()
 	{
 	char KulAdi='a';	/*Burada sadece 1 karekter sorguladık birden fazla sorgulanmak istenirse dizi tanımlanarak yapılabilir.*/
-	int	 Parola,secim;	/*int tipindeki değişkenlerimiz.*/
+	int Parola,secim;	/*int tipindeki değişkenlerimiz.*/
 	int DgrHesap,Yatrlan,Cekilen,Gondrln,HespDgri=2500; /*Tanımladığımız diğer değişkenler.*/
 	char tercih;
 	printf("\t\t --------------------------------------- \n");	//
@@ -18,7 +18,7 @@
 	printf("\t\t --------------------------------------- \n\n");//
 	printf("Lutfen kullanici adinizi ve parolanizi giriniz\n\n");	
 	printf("Kullanici Adi : ");		/*Kullanıcı Sorgulama Ekranımız*/
-	scanf("%c",&KulAdi);			/*Kullanıcı adı 'KulAdi' değişkeninin adresine yazılmıştır.*/
+	scanf("%c",&KulAdi,1);			/*Kullanıcı adı 'KulAdi' değişkeninin adresine yazılmıştır.*/
 	printf("Parola : ");			/*Parola Sorgulama Ekranımız*/
 	scanf("%d",&Parola);			/*Parola 'Parola' değişkeninin adresine yazılmıştır.*/		
 	
