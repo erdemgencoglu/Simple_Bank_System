@@ -9,6 +9,7 @@
 	#include <conio.h>	/*getch(); komutunu içeren kütüphane.*/
 	void main()
 	{
+	system("color 17"); //Arka planın rengini mavi yazı rengini beyaz yapar.
 	char KulAdi='a';	/*Burada sadece 1 karekter sorguladık birden fazla sorgulanmak istenirse dizi tanımlanarak yapılabilir.*/
 	int Parola,secim;	/*int tipindeki değişkenlerimiz.*/
 	int DgrHesap,Yatrlan,Cekilen,Gondrln,HespDgri=2500; /*Tanımladığımız diğer değişkenler.*/
