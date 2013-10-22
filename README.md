@@ -2,7 +2,7 @@ Simple Bank System With C Language
 ===================================
 12253030_Erdem Gençoğlu_Algoritmalar ve Programlama Ödev1
 
-Program VisualStudio2010 ile hazırlanmıştır.C dili kullanılarak yazılmıştır.Komutlara yorum satırı ekleyerek açıklamaya
+Program VisualStudio2012 ile hazırlanmıştır.C dili kullanılarak yazılmıştır.Komutlara yorum satırı ekleyerek açıklamaya
 çalıştım bir hata veya sorunuz olursa mail adresimden bana ulaşabilirsiniz.
 
 ----------------------------------
