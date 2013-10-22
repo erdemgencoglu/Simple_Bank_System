@@ -18,9 +18,9 @@
 	printf("\t\t --------------------------------------- \n\n");//
 	printf("Lutfen kullanici adinizi ve parolanizi giriniz\n\n");	
 	printf("Kullanici Adi : ");		/*Kullanıcı Sorgulama Ekranımız*/
-	scanf("%c",&KulAdi,1);			/*Kullanıcı adı 'KulAdi' değişkeninin adresine yazılmıştır.*/
+	scanf_s("%c",&KulAdi,1);			/*Kullanıcı adı 'KulAdi' değişkeninin adresine yazılmıştır.*/
 	printf("Parola : ");			/*Parola Sorgulama Ekranımız*/
-	scanf("%d",&Parola);			/*Parola 'Parola' değişkeninin adresine yazılmıştır.*/		
+	scanf_s("%d",&Parola);			/*Parola 'Parola' değişkeninin adresine yazılmıştır.*/		
 	
 	if(KulAdi =='a' && Parola==81334)/*Kullanıcı adı ve Şifre sorgluma*/
 		{
@@ -35,7 +35,7 @@
 		printf("| [5] Cikis                           |\n");	//
 		printf(" ------------------------------------- \n\n");	
 		printf("Yapmak istediginiz islem icin (1,2,3,4,5) tuslarini kullanarak secim yapiniz :"); /**Kullanıcıdan seçim yapılması istenmiştir.*/
-		scanf("%d",&secim); /*Yapılan secim 'secim' değişkenini adresine yazılmıştır.*/
+		scanf_s("%d",&secim); /*Yapılan secim 'secim' değişkenini adresine yazılmıştır.*/
 		printf("\n");
 		switch(secim)/*secim değiskenini sorgulayarak istenilen menüye girmeyi sağlar.*/
 		{
@@ -46,7 +46,7 @@
 			case 2:	// case 2: de para yatırma menüsü ve işlemleri yapılmıştır.
 			printf("\t\t\t--PARA YATIRMA--\n\n");				
 			printf("Lutfen yatiracaginiz para miktarini giriniz: ");	
-			scanf("%d",&Yatrlan);						
+			scanf_s("%d",&Yatrlan);						
 			HespDgri=HespDgri+Yatrlan;					
 			printf("Hesabiniza %d TL yatirildi.\n",Yatrlan);		
 			printf("Toplam kullanilabilir bakiyeniz=%d Tl dir.\n",HespDgri);			
@@ -55,7 +55,7 @@
 			case 3:	// case 3: de para çekme menüsü ve işlemleri vardır ve case yapsının içinde 						
 			printf("\t\t\t--PARA CEKME--\n\n");				 
 			printf("Lutfen Cekeceginiz Para Miktarini Giriniz: ");	
-			scanf("%d",&Cekilen);						
+			scanf_s("%d",&Cekilen);						
 				if(Cekilen>HespDgri)/*if yapsında çekilen paranın büyüklüğü kontrol edilmiştir.*/
 				{
 				printf("Hesabinizda Yeteri Kadar Para Bulunmamaktadir.\n");			
@@ -70,9 +70,9 @@
 			case 4:	// case 4: de ise para gönderme ve işlemleri yapılmıştır.  
 				printf("\t\t\t--PARA GONDERME--\n");				
 				printf("Para gondereceginiz hesab numarasini giriniz:");	
-				scanf("%d",&DgrHesap);						
+				scanf_s("%d",&DgrHesap);						
 				printf("Gondericeginiz para miktarini giriniz:");
-				scanf("%d",&Gondrln);						
+				scanf_s("%d",&Gondrln);						
 					if(Gondrln>HespDgri) /*Gönderilen paranın hesabımızdaki para ile karşılaştırılması yapılmıştır. */
 					{
 					printf("Hesabinizda Yeteri Kadar Para Bulunmamaktadir.\n");//Eğer bakiyemiz yeterli değilse bu kullanıcıya belirtilmiştir.					
@@ -97,7 +97,7 @@
 		printf("Yeni bir isleme devam etmek istiyormusunuz?\n");	
 		printf("(e) veya (h) "); // Yeni işlem yapılma sorgusu
 		printf("\n");							
-		tercih=getch();							
+		tercih=_getch();							
 			}
 	while(tercih =='e');// while döngüsü tercih e olduğu sürece islemlerin sürekli tekrarlanmasını sağlar.
 		}
